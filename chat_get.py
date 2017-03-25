@@ -1,5 +1,4 @@
 
-
 import mechanize
 br = mechanize.Browser()
 br.set_handle_robots( False )
@@ -15,5 +14,11 @@ for form in br.forms():
 
 br.select_form(nr = 0)
 br.form['ENTRY'] = 'Hello !'
-br.submit()
-br.response.read()
+
+response =  br.submit()
+new_url = response.geturl()
+x = br.open(new_url)
+
+print x.read()
+
+
