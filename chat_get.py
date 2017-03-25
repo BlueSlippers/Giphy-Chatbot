@@ -1,9 +1,12 @@
 
 
+import bs4 as bs
+import urllib2
 import mechanize
 import cache
 
-def return_output_html(string):
+
+def return_output _text(string):
     br = mechanize.Browser()
     br.set_handle_robots(False)
 
@@ -20,6 +23,16 @@ def return_output_html(string):
     new_url = response.geturl()
 
     cache.base_url = new_url
+        #updated url for el bot output
+        
+    sauce = urllib2.urlopen(new_url)
+    soup = bs.BeautifulSoup(sauce,"lxml")
+    list = []
+    for matter in soup.find_all('td'):    #scrapping td tags for the output
+        s = matter.text
+        if not (s == ""):           #deleting empty text tags
+            list.append(s)
+    return list[0]
 
 
 
