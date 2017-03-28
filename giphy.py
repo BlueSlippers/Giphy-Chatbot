@@ -16,10 +16,12 @@ def getgifurl(gifkeyword):      #takes in the key word and returns the url of th
     url = "https://media.giphy.com/media/"+t[n-length+1:]+"/giphy.gif"
     return url
 
-# as the url is returned here iam downloading the file here please copy tthe same in main
+# as the url is returned here iam downloading the file here please copy the same in main.
 
 
-# import urllib
-# a = sample, b = gif
-# urllib.urlretrieve(url, a + str(counter) + b)
-# Where counter keeps a record of number of gif's saved
+import urllib
+def download_gif(string, integer_count ):
+    a = 'sample'
+    b = '.gif'
+    urllib.urlretrieve(getgifurl( string ), a + str( integer_count ) + b)
+    #Where counter keeps a record of number of gif's saved
