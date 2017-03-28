@@ -6,7 +6,7 @@ import mechanize
 import cache
 
 
-def return_output _text(string):
+def return_output_text(string):
     br = mechanize.Browser()
     br.set_handle_robots(False)
 
