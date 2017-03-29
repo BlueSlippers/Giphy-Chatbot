@@ -1,3 +1,5 @@
+#Redundant file. Not in use. 
+'''
 from Tkinter import *
 from PIL import Image, ImageTk, ImageSequence
 
@@ -21,3 +23,4 @@ class App:
 root = Tk()
 app = App(root)
 root.mainloop()
+'''
