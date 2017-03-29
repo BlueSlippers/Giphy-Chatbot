@@ -1,5 +1,5 @@
 #Redundant. Not required.
-
+'''
 import bs4 as bs
 import urllib2
 import mechanize
@@ -35,5 +35,5 @@ def return_output_text(string):
     return list[0]
 
 
-
+'''
 
