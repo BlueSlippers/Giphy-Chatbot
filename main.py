@@ -51,10 +51,15 @@ def enter_pressed(event):
     global counter
     output_label = Label(frame, text =Return_output(input_get))
     
+    #Downloads gif. 
     giphy.download_gif(Return_output(input_get),counter)
     
     output_label.pack()
-
+    
+    location =  'sample' + str(counter) + '.gif'
+    #Displays gif
+    app = main.App(window, location)
+    
     counter+=1
     return "break"
 
