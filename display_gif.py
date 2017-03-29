@@ -3,13 +3,13 @@ from PIL import Image, ImageTk, ImageSequence
 
 
 class App:
-    def __init__(self, parent):
+    def __init__(self, parent, location):
         self.parent = parent
         self.canvas = Canvas(parent, width=500, height=900)
         self.canvas.pack()
         self.sequence = [ImageTk.PhotoImage(img)
                          for img in ImageSequence.Iterator(
-                Image.open("football.gif"))]
+                Image.open(location))]
         self.image = self.canvas.create_image(300, 200, image=self.sequence[0])
         self.animate(1)
 
