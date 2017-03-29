@@ -17,7 +17,6 @@ br.addheaders = [('User-agent',
 ###Finised setting of virtual browser
 
 ###Setting of Regex values
-regex = '<style><.+?></style>'
 regex1 = '(?<=-->)(.*)(?=<!)'
 pattern = re.compile(regex1)
 ###Done
