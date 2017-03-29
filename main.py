@@ -3,6 +3,7 @@ import mechanize
 import re
 import giphy
 import display_gif
+import filter
 ###Mechanize set-up
 url = "http://elbot_e.csoica.artificial-solutions.com/cgi-bin/elbot.cgi"
 br = mechanize.Browser()
@@ -49,7 +50,7 @@ def enter_pressed(event):
     label.pack()
     
     global counter
-    output_label = Label(frame, text =Return_output(input_get))
+    output_label = Label(frame, text =filter.split_string(Return_output(input_get)))
     
     #Downloads gif. 
     giphy.download_gif(Return_output(input_get),counter)
