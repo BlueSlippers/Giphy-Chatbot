@@ -1,5 +1,3 @@
-#Redundant file. Not in use. 
-'''
 from Tkinter import *
 from PIL import Image, ImageTk, ImageSequence
 
@@ -19,7 +17,7 @@ class App:
         self.canvas.itemconfig(self.image, image=self.sequence[counter])
         self.parent.after(20, lambda: self.animate((counter + 1) % len(self.sequence)))
 
-
+'''
 root = Tk()
 app = App(root)
 root.mainloop()
