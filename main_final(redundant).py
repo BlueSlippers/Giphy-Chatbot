@@ -1,3 +1,5 @@
+#Redundant file. Not im use
+'''
 from Tkinter import *
 from PIL import Image, ImageTk, ImageSequence
  
@@ -43,4 +45,5 @@ entry_1.pack(side=LEFT,fill=BOTH)
 button_1=Button(bottom_frame,text="Send",command=display_input)
 button_1.pack()
  
-root.mainloop(
+root.mainloop()
+'''
