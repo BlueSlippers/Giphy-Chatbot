@@ -1,6 +1,7 @@
 from Tkinter import *
 import mechanize
 import re
+import giphy
 
 ###Mechanize set-up
 url = "http://elbot_e.csoica.artificial-solutions.com/cgi-bin/elbot.cgi"
@@ -38,6 +39,7 @@ input_field.pack(side=BOTTOM, fill=X)
 scroll = Scrollbar(window)
 scroll.pack(side=RIGHT, fill=BOTH)
 
+counter = 1
 def enter_pressed(event):
 
     input_get = input_field.get()
@@ -45,10 +47,15 @@ def enter_pressed(event):
     label = Label(frame, text=input_get)
     input_user.set('')
     label.pack()
-
+    
+    global counter
     output_label = Label(frame, text =Return_output(input_get))
+    
+    giphy.download_gif(Return_output(input_get),counter)
+    
     output_label.pack()
 
+    counter+=1
     return "break"
 
 frame = Frame(window, width=300, height=300)
