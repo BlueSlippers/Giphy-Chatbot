@@ -2,7 +2,7 @@ from Tkinter import *
 import mechanize
 import re
 import giphy
-
+import display_gif
 ###Mechanize set-up
 url = "http://elbot_e.csoica.artificial-solutions.com/cgi-bin/elbot.cgi"
 br = mechanize.Browser()
@@ -58,7 +58,7 @@ def enter_pressed(event):
     
     location =  'sample' + str(counter) + '.gif'
     #Displays gif
-    app = main.App(window, location)
+    app = display_gif.App(window, location)
     
     counter+=1
     return "break"
