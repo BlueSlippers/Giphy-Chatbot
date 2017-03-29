@@ -1,5 +1,5 @@
 ##Redundant. Not used. 
-from Tkinter import *
+'''from Tkinter import *
 
 
 root = Tk()
@@ -37,3 +37,4 @@ button_1.pack()
 
 
 root.mainloop()
+'''
