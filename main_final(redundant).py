@@ -1,4 +1,4 @@
-#Redundant file. Not im use
+#Redundant file. Not im use anymore
 '''
 from Tkinter import *
 from PIL import Image, ImageTk, ImageSequence
